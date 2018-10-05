@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/tooltip_enter.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/tooltip_enter.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_out.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/63b0bba474a605eed47a676713e83ba7/res/anim/catalyst_fade_out.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/63b0bba474a605eed47a676713e83ba7/res/anim/catalyst_fade_in.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/63b0bba474a605eed47a676713e83ba7/res/anim/catalyst_slide_down.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/63b0bba474a605eed47a676713e83ba7/res/anim/catalyst_slide_up.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/63b0bba474a605eed47a676713e83ba7/res/anim/catalyst_push_up_out.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_in.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/react-native-0.56.1.aar/63b0bba474a605eed47a676713e83ba7/res/anim/catalyst_push_up_in.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/anim/tooltip_exit.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/anim/tooltip_exit.xml"
+    }
+]

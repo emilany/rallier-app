@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a2d78e868d78c64bb46e1718826f9316/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/drawable-v21/abc_edit_text_material.xml"
+    }
+]

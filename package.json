@@ -1,0 +1,65 @@
+{
+  "name": "Rallier",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --write '*.js'",
+    "format-code": "yarn run prettier && yarn run lint:fix",
+    "precommit": "lint-staged",
+    "launch-ios": "react-native run-ios --simulator \"iPhone X\""
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run format-code",
+      "git-add"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "hoist-non-react-statics": "^3.0.1",
+    "merge": "^1.2.0",
+    "prop-types": "^15.6.2",
+    "react": "16.4.1",
+    "react-native": "^0.56.0",
+    "react-native-dropdownalert": "^3.5.0",
+    "react-native-elements": "^0.19.1",
+    "react-native-extended-stylesheet": "^0.9.0",
+    "react-native-linear-gradient": "^2.4.2",
+    "react-native-responsive-screen": "^1.1.9",
+    "react-native-snap-carousel": "^3.7.4",
+    "react-native-splash-screen": "^3.1.1",
+    "react-native-vector-icons": "^5.0.0",
+    "react-navigation": "^2.12.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^0.16.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "^5",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "jest": "23.5.0",
+    "lint-staged": "^7.2.2",
+    "prettier": "1.14.2",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}

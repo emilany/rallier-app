@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "source": "/Users/emilany/Desktop/rallier-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/logo.png",
+        "source": "/Users/emilany/Desktop/rallier-app/android/app/src/main/res/mipmap-xxxhdpi/logo.png"
+    },
+    {
+        "merged": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher_round.png",
+        "source": "/Users/emilany/Desktop/rallier-app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    }
+]
