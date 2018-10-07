@@ -4,6 +4,7 @@ ADDED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManife
 INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
 INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-vector-icons] /Users/emilany/Desktop/rallier-app/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-splash-screen] /Users/emilany/Desktop/rallier-app/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-14:12
 MERGED from [:react-native-linear-gradient] /Users/emilany/Desktop/rallier-app/node_modules/react-native-linear-gradient/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
@@ -122,6 +123,8 @@ uses-sdk
 INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-vector-icons] /Users/emilany/Desktop/rallier-app/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/emilany/Desktop/rallier-app/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-splash-screen] /Users/emilany/Desktop/rallier-app/node_modules/react-native-splash-screen/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
@@ -178,6 +181,16 @@ INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidMan
 		INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml
 		ADDED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/emilany/Desktop/rallier-app/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.NFC
+ADDED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-62
+	android:name
+		ADDED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:22-59
+uses-feature#android.hardware.nfc
+ADDED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:9:5-11:36
+	android:required
+		ADDED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:9-33
+	android:name
+		ADDED from [:react-native-nfc-manager] /Users/emilany/Desktop/rallier-app/node_modules/react-native-nfc-manager/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:10:9-44
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/emilany/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/243e75c0422b934d164f67b2a7860c8f/AndroidManifest.xml:23:9-25:38

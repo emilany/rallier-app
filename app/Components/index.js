@@ -1,33 +1,26 @@
 import { AlertProvider, connectAlert } from './Alert';
-import { Button, GradientButton, ImageButton } from './Button';
-import { BottomBar } from './BottomBar';
-import { Card } from './Card';
-import { Chip } from './Chip';
-import { Container, GradientContainer, ImageContainer, ScrollContainer } from './Container';
-import { Header, HeaderMain } from './Header';
-import { ListItem } from './ListItem';
+import {
+  Button, GradientButton, ImageButton,
+} from './Button';
+import { Container, ScrollContainer } from './Container';
 import { SeparatorLine, SeparatorSpace } from './Separator';
-import { SliderEntry } from './Slider';
+import { Header } from './Header';
 import { TabItem } from './TabItem';
+import { Nfc } from './Nfc';
+import { ListItem } from './ListItem';
 
 export {
   AlertProvider,
   Button,
-  BottomBar,
-  Card,
-  Chip,
+  GradientButton,
+  ImageButton,
   connectAlert,
   Container,
-  GradientButton,
-  GradientContainer,
-  Header,
-  HeaderMain,
-  ImageButton,
-  ImageContainer,
-  ListItem,
+  ScrollContainer,
   SeparatorLine,
   SeparatorSpace,
-  SliderEntry,
+  Header,
   TabItem,
-  ScrollContainer,
+  Nfc,
+  ListItem,
 };
