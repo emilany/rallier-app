@@ -8,6 +8,7 @@ import { Header } from './Header';
 import { TabItem } from './TabItem';
 import { Nfc } from './Nfc';
 import { ListItem } from './ListItem';
+import { DetailsItem } from './DetailsItem';
 
 export {
   AlertProvider,
@@ -23,4 +24,5 @@ export {
   TabItem,
   Nfc,
   ListItem,
+  DetailsItem,
 };

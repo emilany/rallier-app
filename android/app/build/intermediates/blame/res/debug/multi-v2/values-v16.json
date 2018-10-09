@@ -4,17 +4,7 @@
             "outputFile": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a2d78e868d78c64bb46e1718826f9316/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/values-v16/values-v16.xml",
+                    "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/193fdca501c52a73c86658d8598ea384/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/f227ff0608c6894607220a224e9fc8a8/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

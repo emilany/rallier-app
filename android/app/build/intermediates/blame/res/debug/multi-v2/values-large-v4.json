@@ -4,7 +4,7 @@
             "outputFile": "/Users/emilany/Desktop/rallier-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/0dbc55e3adc5129c49f99b0a44fddb16/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/emilany/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/193fdca501c52a73c86658d8598ea384/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

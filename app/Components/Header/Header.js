@@ -12,8 +12,6 @@ class Header extends Component {
   }
 
   onPressIconRight = () => {
-    const { navigation } = this.props;
-    navigation.navigate('Respond');
   }
 
   onPressSendResponse = () => {

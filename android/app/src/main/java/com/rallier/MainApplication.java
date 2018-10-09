@@ -3,6 +3,7 @@ package com.rallier;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.oblador.vectoricons.VectorIconsPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import community.revteltech.nfc.NfcManagerPackage;
@@ -27,10 +28,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNDeviceInfo(),
             new VectorIconsPackage(),
-            new SplashScreenReactPackage(),
             new NfcManagerPackage(),
-            new LinearGradientPackage()
+            new LinearGradientPackage(),
+            new SplashScreenReactPackage()
       );
     }
 

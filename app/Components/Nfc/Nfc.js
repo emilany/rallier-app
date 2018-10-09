@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import {
-  View, Text, Image, Platform,
+  View, Text, Image, TouchableOpacity,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import NfcManager from 'react-native-nfc-manager';
 
 import {
   ScrollContainer, SeparatorLine, GradientButton,
@@ -16,112 +15,13 @@ import styles from './styles';
 class Nfc extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      supported: true,
-      enabled: false,
-      tag: {},
-    };
-  }
-
-  componentDidMount() {
-    NfcManager.isSupported()
-      .then((supported) => {
-        this.setState({ supported });
-        if (supported) {
-          this.startNfc();
-          this.startDetection();
-        }
-      });
-  }
-
-  componentWillUnmount() {
-    if (this._stateChangedSubscription) {
-      this._stateChangedSubscription.remove();
-    }
-  }
-
-  startDetection = () => {
-    NfcManager.registerTagEvent(this.onTagDiscovered)
-      .then((result) => {
-        console.log('registerTagEvent OK', result);
-      })
-      .catch((error) => {
-        console.warn('registerTagEvent fail', error);
-      });
-  }
-
-  onTagDiscovered = (tag) => {
-    this.setState({ tag });
-  }
-
-  goToNfcSetting = () => {
-    if (Platform.OS === 'android') {
-      NfcManager.goToNfcSetting()
-        .then((result) => {
-          console.log('goToNfcSetting OK', result);
-        })
-        .catch((error) => {
-          console.warn('goToNfcSetting fail', error);
-        });
-    }
-  }
-
-  startNfc() {
-    NfcManager.start({
-      onSessionClosedIOS: () => {
-        console.log('ios session closed');
-      },
-    })
-      .then((result) => {
-        console.log('start OK', result);
-      })
-      .catch((error) => {
-        console.warn('start fail', error);
-        this.setState({ supported: false });
-      });
-
-    if (Platform.OS === 'android') {
-      NfcManager.getLaunchTagEvent()
-        .then((tag) => {
-          console.log('launch tag', tag);
-          if (tag) {
-            this.setState({ tag });
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-
-      NfcManager.isEnabled()
-        .then((enabled) => {
-          this.setState({ enabled });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-
-      NfcManager.onStateChanged((event) => {
-        if (event.state === 'on') {
-          this.setState({ enabled: true });
-        } else if (event.state === 'off') {
-          this.setState({ enabled: false });
-        }
-      })
-        .then((sub) => {
-          this._stateChangedSubscription = sub;
-          // remember to call this._stateChangedSubscription.remove()
-          // when you don't want to listen to this anymore
-        })
-        .catch((err) => {
-          console.warn(err);
-        });
-    }
+    this.props = props;
   }
 
   render() {
-    const { tag } = this.state;
     const {
       heading, description, buttonText, onPressButton,
+      tag, enabled, onPressEnable,
     } = this.props;
     return (
       <ScrollContainer>
@@ -137,9 +37,20 @@ class Nfc extends Component {
               <Text style={styles.textHeading}>
                 {heading.toUpperCase()}
               </Text>
-              <Text style={styles.text}>
-                {description}
-              </Text>
+              {enabled
+                ? (
+                  <Text style={styles.text}>
+                    {description}
+                  </Text>
+                )
+                : (
+                  <TouchableOpacity onPress={onPressEnable}>
+                    <Text style={styles.text}>
+                      Click here to enable NFC
+                    </Text>
+                  </TouchableOpacity>
+                )
+              }
             </View>
           </View>
           <View style={styles.detailsContainer}>
@@ -148,7 +59,7 @@ class Nfc extends Component {
             </Text>
             <View style={styles.inputContainer}>
               <Text style={styles.textHeading}>
-                {tag.id}
+                {tag}
               </Text>
             </View>
             <SeparatorLine marginVertical={10} />
@@ -171,6 +82,9 @@ Nfc.propTypes = {
   description: PropTypes.string,
   buttonText: PropTypes.string,
   onPressButton: PropTypes.func,
+  onPressEnable: PropTypes.func,
+  tag: PropTypes.string,
+  enabled: PropTypes.bool,
 };
 
 export default Nfc;

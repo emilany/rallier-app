@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import SplashScreen from 'react-native-splash-screen';
 import EStyleSheet from 'react-native-extended-stylesheet';
-// import { Provider } from 'react-redux';
-// import { persistStore } from 'redux-persist';
+import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
 
 import createRootNavigator from './Config/Routes';
 import { Colors, Metrics } from './Themes';
-// import configureStore from './Config/Store';
+import configureStore from './Config/Store';
 import { AlertProvider } from './Components';
 
 EStyleSheet.build({
@@ -14,26 +14,27 @@ EStyleSheet.build({
   ...Metrics,
 });
 
-// const { store } = configureStore();
+const { store } = configureStore();
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isSignedIn: true,
-      checkedSignIn: false,
+      isSynced: false,
+      checkedSync: false,
     };
   }
 
   componentWillMount() {
     // check auth available in redux store
-    // persistStore(store, {}, () => {
-    //   this.setState({
-    //     checkedSignIn: true,
-    //     isSignedIn: store.getState().user.auth !== undefined,
-    //   });
-    // });
+    persistStore(store, {}, () => {
+      this.setState({
+        checkedSync: true,
+        isSynced: store.getState().device.isSynced,
+        deviceSync: store.getState().device.deviceSync,
+      });
+    });
   }
 
   componentDidMount() {
@@ -41,15 +42,18 @@ class App extends Component {
   }
 
   render() {
-    const { isSignedIn, checkedSignIn } = this.state;
-    // if (!checkedSignIn) {
-    //   return null;
-    // }
-    const Layout = createRootNavigator(isSignedIn);
+    const { isSynced, checkedSync, deviceSync } = this.state;
+    console.log('deviceSync', deviceSync);
+    if (!checkedSync) {
+      return null;
+    }
+    const Layout = createRootNavigator(isSynced);
     return (
-      <AlertProvider>
-        <Layout />
-      </AlertProvider>
+      <Provider store={store}>
+        <AlertProvider>
+          <Layout />
+        </AlertProvider>
+      </Provider>
     );
   }
 }

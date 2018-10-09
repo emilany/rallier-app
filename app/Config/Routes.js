@@ -7,29 +7,29 @@ import {
 
 import { Header, TabItem } from '../Components';
 import {
-  Main, Onboarding, Respond, Register,
+  Main, Onboarding, Respond, Register, Details,
 } from '../Screens';
 import { ICON_NFC, ICON_INFO } from '../Images';
 import { Colors } from '../Themes';
 
 const ResponsesRoutes = createMaterialTopTabNavigator(
   {
-    All: {
-      screen: props => <Main {...props} title="All" />,
+    Pending: {
+      screen: props => <Main title="Pending" status={0} {...props} />,
       navigationOptions: {
-        tabBarLabel: props => <TabItem title="All" {...props} />,
+        tabBarLabel: props => <TabItem title="Pending" {...props} />,
       },
     },
     Responded: {
-      screen: props => <Main {...props} title="Responded" />,
+      screen: props => <Main title="Responded" status={1} {...props} />,
       navigationOptions: {
         tabBarLabel: props => <TabItem title="Responded" {...props} />,
       },
     },
-    Missed: {
-      screen: props => <Main {...props} title="Missed" />,
+    All: {
+      screen: props => <Main title="All" {...props} />,
       navigationOptions: {
-        tabBarLabel: props => <TabItem title="Missed" {...props} />,
+        tabBarLabel: props => <TabItem title="All" {...props} />,
       },
     },
   },
@@ -41,6 +41,7 @@ const ResponsesRoutes = createMaterialTopTabNavigator(
       renderIndicator: () => null,
     },
     swipeEnabled: true,
+    lazy: false,
   },
 );
 
@@ -54,7 +55,7 @@ const Authenticated = createStackNavigator(
             iconLeft={ICON_NFC}
             iconRight={ICON_INFO}
             text="Rallier"
-            isMain
+            // isMain
             navigation={navigation}
           />
         ),
@@ -68,6 +69,12 @@ const Authenticated = createStackNavigator(
     },
     Register: {
       screen: Register,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    Details: {
+      screen: Details,
       navigationOptions: {
         header: null,
       },

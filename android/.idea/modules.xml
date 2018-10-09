@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Rallier.iml" filepath="$PROJECT_DIR$/Rallier.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-device-info/android/react-native-device-info.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-device-info/android/react-native-device-info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-get-imei/android/react-native-get-imei.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-get-imei/android/react-native-get-imei.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-linear-gradient/android/react-native-linear-gradient.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-linear-gradient/android/react-native-linear-gradient.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-nfc-manager/android/react-native-nfc-manager.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-nfc-manager/android/react-native-nfc-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-splash-screen/android/react-native-splash-screen.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-splash-screen/android/react-native-splash-screen.iml" />

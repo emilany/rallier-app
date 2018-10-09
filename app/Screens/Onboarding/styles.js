@@ -22,12 +22,19 @@ const styles = EStyleSheet.create({
   text: {
     textAlign: 'center',
     lineHeight: '40rem',
-    color: '$primaryColor',
+    color: '$colorSecondary',
     fontFamily: Fonts.type.regular,
     fontSize: '32rem',
     '@media android': {
       paddingBottom: '15rem',
     },
+  },
+  textId: {
+    textAlign: 'center',
+    color: '$colorSecondaryLight',
+    fontFamily: Fonts.type.regular,
+    fontSize: Fonts.size.medium,
+    paddingTop: '20rem',
   },
 });
 

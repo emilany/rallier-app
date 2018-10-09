@@ -13,7 +13,7 @@ const size = {
   tiny: '8.5rem',
 
   heading: '14rem',
-  profileName: '32rem',
+  worksiteName: '28rem',
   tabNavigator: '11rem',
 };
 
