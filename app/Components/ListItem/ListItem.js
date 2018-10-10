@@ -39,7 +39,7 @@ ListItem.propTypes = {
   name: PropTypes.string,
   time: PropTypes.string,
   status: PropTypes.string,
-  onPressResponse: PropTypes.object,
+  onPressResponse: PropTypes.func,
 };
 
 export default ListItem;

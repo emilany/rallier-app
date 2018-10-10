@@ -21,7 +21,7 @@ class Nfc extends Component {
   render() {
     const {
       heading, description, buttonText, onPressButton,
-      tag, enabled, onPressEnable,
+      tag, enabled, supported, onPressEnable,
     } = this.props;
     return (
       <ScrollContainer>
@@ -37,7 +37,12 @@ class Nfc extends Component {
               <Text style={styles.textHeading}>
                 {heading.toUpperCase()}
               </Text>
-              {enabled
+              {!supported && (
+                <Text style={styles.text}>
+                  {description}
+                </Text>
+              )}
+              {supported && enabled
                 ? (
                   <Text style={styles.text}>
                     {description}
@@ -85,6 +90,7 @@ Nfc.propTypes = {
   onPressEnable: PropTypes.func,
   tag: PropTypes.string,
   enabled: PropTypes.bool,
+  supported: PropTypes.bool,
 };
 
 export default Nfc;

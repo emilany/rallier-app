@@ -6,7 +6,6 @@ import NfcManager from 'react-native-nfc-manager';
 
 import { Nfc, connectAlert } from '../../Components';
 import { respondNfc } from '../../Actions/Respond';
-import styles from './styles';
 
 class Respond extends Component {
   constructor(props) {
@@ -32,18 +31,21 @@ class Respond extends Component {
   componentWillReceiveProps(nextProps) {
     const { alertWithType, navigation } = this.props;
     if (nextProps.error) {
-      alertWithType('error', 'Error', nextProps.error);
+      if (nextProps.error.includes('400')) {
+        alertWithType('info', 'Info', 'Already responded');
+      } else {
+        alertWithType('error', 'Error', nextProps.error);
+      }
     }
     if (nextProps.status === 201 || nextProps.status === 200) {
       alertWithType('success', 'Success', 'Successfully sent response');
+      navigation.state.params.onNavigateBack();
       navigation.goBack(null);
     }
   }
 
   componentWillUnmount() {
-    if (this._stateChangedSubscription) {
-      this._stateChangedSubscription.remove();
-    }
+    this.stopDetection();
   }
 
   startDetection = () => {
@@ -53,6 +55,16 @@ class Respond extends Component {
       })
       .catch((error) => {
         console.warn('registerTagEvent fail', error);
+      });
+  }
+
+  stopDetection = () => {
+    NfcManager.unregisterTagEvent()
+      .then((result) => {
+        console.log('unregisterTagEvent OK', result);
+      })
+      .catch((error) => {
+        console.warn('unregisterTagEvent fail', error);
       });
   }
 
@@ -125,26 +137,10 @@ class Respond extends Component {
           console.log(err);
         });
     }
-
-    NfcManager.onStateChanged((event) => {
-      if (event.state === 'on') {
-        this.setState({ enabled: true });
-      } else if (event.state === 'off') {
-        this.setState({ enabled: false });
-      }
-    })
-      .then((sub) => {
-        this._stateChangedSubscription = sub;
-        // remember to call this._stateChangedSubscription.remove()
-        // when you don't want to listen to this anymore
-      })
-      .catch((err) => {
-        console.warn(err);
-      });
   }
 
   render() {
-    const { tag, enabled } = this.state;
+    const { tag, enabled, supported } = this.state;
     return (
       <Nfc
         heading="Send Response"
@@ -153,6 +149,7 @@ class Respond extends Component {
         onPressButton={this.onPressSendResponse}
         tag={tag.id}
         enabled={enabled}
+        supported={supported}
         onPressEnable={this.onPressEnable}
       />
     );

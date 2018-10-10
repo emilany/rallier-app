@@ -31,7 +31,11 @@ class Register extends Component {
   componentWillReceiveProps(nextProps) {
     const { alertWithType, navigation } = this.props;
     if (nextProps.error) {
-      alertWithType('error', 'Error', nextProps.error);
+      if (nextProps.error.includes('400')) {
+        alertWithType('info', 'Info', 'NFC already registered');
+      } else {
+        alertWithType('error', 'Error', nextProps.error);
+      }
     }
     if (nextProps.status === 201 || nextProps.status === 200) {
       alertWithType('success', 'Success', 'Successfully registered nfc');
@@ -40,9 +44,7 @@ class Register extends Component {
   }
 
   componentWillUnmount() {
-    if (this._stateChangedSubscription) {
-      this._stateChangedSubscription.remove();
-    }
+    this.stopDetection();
   }
 
   startDetection = () => {
@@ -52,6 +54,16 @@ class Register extends Component {
       })
       .catch((error) => {
         console.warn('registerTagEvent fail', error);
+      });
+  }
+
+  stopDetection = () => {
+    NfcManager.unregisterTagEvent()
+      .then((result) => {
+        console.log('unregisterTagEvent OK', result);
+      })
+      .catch((error) => {
+        console.warn('unregisterTagEvent fail', error);
       });
   }
 
@@ -123,26 +135,10 @@ class Register extends Component {
           console.log(err);
         });
     }
-
-    NfcManager.onStateChanged((event) => {
-      if (event.state === 'on') {
-        this.setState({ enabled: true });
-      } else if (event.state === 'off') {
-        this.setState({ enabled: false });
-      }
-    })
-      .then((sub) => {
-        this._stateChangedSubscription = sub;
-        // remember to call this._stateChangedSubscription.remove()
-        // when you don't want to listen to this anymore
-      })
-      .catch((err) => {
-        console.warn(err);
-      });
   }
 
   render() {
-    const { tag, enabled } = this.state;
+    const { tag, enabled, supported } = this.state;
     return (
       <Nfc
         heading="Register NFC"
@@ -151,6 +147,7 @@ class Register extends Component {
         onPressButton={this.onPressRegister}
         tag={tag.id}
         enabled={enabled}
+        supported={supported}
         onPressEnable={this.onPressEnable}
       />
     );

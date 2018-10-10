@@ -11,23 +11,22 @@ import { getResponsesList } from '../../Actions/Responses';
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      responses: [],
-    };
+    this.props = props;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.refreshResponseList();
   }
 
   componentWillReceiveProps(nextProps) {
-    const { alertWithType, responses } = this.props;
+    const { alertWithType } = this.props;
     if (nextProps.error) {
       alertWithType('error', 'Error', nextProps.error);
     }
-    if (responses && responses !== nextProps.responses) {
-      this.setState({ responses });
-    }
+  }
+
+  handleOnNavigateBack = () => {
+    this.refreshResponseList();
   }
 
   onPressResponse = (id) => {
@@ -35,6 +34,7 @@ class Main extends Component {
     const { navigation } = this.props;
     navigation.navigate('Respond', {
       id,
+      onNavigateBack: this.handleOnNavigateBack,
     });
   }
 
@@ -44,11 +44,10 @@ class Main extends Component {
   }
 
   render() {
-    const { status, isLoading } = this.props;
-    const { responses } = this.state;
+    const { status, isLoading, responses } = this.props;
     const data = status != null
-      ? responses.filter(obj => (obj.status === status))
-      : responses.filter(obj => (obj.status !== 2));
+      ? responses && responses.filter(obj => (obj.status === status))
+      : responses && responses.filter(obj => (obj.status !== 2));
     return (
       <ScrollContainer>
         {data && (
@@ -63,7 +62,7 @@ class Main extends Component {
                 onPressResponse={() => this.onPressResponse(item.id)}
               />
             )}
-            keyExtractor={item => item.id}
+            keyExtractor={item => item.id.toString()}
             ItemSeparatorComponent={SeparatorLine}
             onRefresh={this.refreshResponseList}
             refreshing={isLoading}
