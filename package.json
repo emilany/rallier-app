@@ -10,7 +10,9 @@
     "prettier": "prettier --write '*.js'",
     "format-code": "yarn run prettier && yarn run lint:fix",
     "precommit": "lint-staged",
-    "launch-ios": "react-native run-ios --simulator \"iPhone X\""
+    "launch-ios": "react-native run-ios --simulator \"iPhone X\"",
+    "launch-android": "react-native run-android && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest andro id/app/src/main/res",
+    "generate-apk": "cd android && ./gradlew assembleRelease"
   },
   "lint-staged": {
     "*.js": [
